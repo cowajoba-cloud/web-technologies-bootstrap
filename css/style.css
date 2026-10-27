@@ -4,8 +4,14 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #174ea6, #3478d4);
-        }
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(12, 28, 55, 0.48), rgba(12, 28, 55, 0.58)),
+        url("../assets/dog-breeds.png") center 55% / cover no-repeat;
+    color: #ffffff;
+}
 
         .app-card {
             border: 0;
@@ -27,3 +33,5 @@
             outline: 3px solid #d97706;
             outline-offset: 3px;
         }
+
+
