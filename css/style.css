@@ -1,0 +1,29 @@
+﻿body {
+            background-color: #f3f6fb;
+            color: #243247;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #174ea6, #3478d4);
+        }
+
+        .app-card {
+            border: 0;
+            border-radius: 1rem;
+            box-shadow: 0 0.25rem 1rem rgba(25, 45, 80, 0.08);
+        }
+
+        .dog-image {
+            max-width: 100%;
+            max-height: 450px;
+            object-fit: contain;
+        }
+
+        .section-heading {
+            color: #174ea6;
+        }
+
+        :focus-visible {
+            outline: 3px solid #d97706;
+            outline-offset: 3px;
+        }
