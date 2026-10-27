@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,6 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#home">WebTech Studio</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#mainNavigation" aria-controls="mainNavigation"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -37,37 +37,60 @@
         </div>
     </nav>
 
+    <!-- Hero image is separate from the text below it -->
     <header class="hero" id="home">
-        <div class="container hero-inner">
-            <div class="hero-copy">
-                <p class="eyebrow">WEB TECHNOLOGIES · FINAL PROJECT</p>
-                <h1>Building for people, not just browsers.</h1>
-                <p class="hero-description">
-                    I’m Charles Owajoba. This project brings together responsive
-                    interface design, practical JavaScript, browser-side form
-                    validation and a live public API.
-                </p>
-                <a class="btn btn-light btn-lg hero-button" href="#main-content">Explore the project</a>
-                <div class="technology-pill">HTML · CSS · JavaScript · Bootstrap 5</div>
-                <p class="hero-caption">A hands-on web application project</p>
+        <div class="hero-image-wrap">
+            <img
+                class="hero-image"
+                src="assets/dog-breeds.png"
+                alt="A group of different dog breeds outdoors">
+        </div>
+
+        <div class="hero-copy-wrap">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow">WEB TECHNOLOGIES · FINAL PROJECT</p>
+
+                    <h1>Building for people, not just browsers.</h1>
+
+                    <p class="hero-description">
+                        I’m Charles Owajoba. This project brings together responsive
+                        interface design, practical JavaScript, browser-side form
+                        validation and a live public API.
+                    </p>
+
+                    <a class="btn btn-primary btn-lg hero-button" href="#main-content">
+                        Explore the project
+                    </a>
+
+                    <div class="technology-pill">
+                        HTML · CSS · JavaScript · Bootstrap 5
+                    </div>
+
+                    <p class="hero-caption">A hands-on web application project</p>
+                </div>
             </div>
         </div>
     </header>
 
     <main class="container page-content" id="main-content">
         <div class="row g-4">
+
             <div class="col-12 col-lg-6">
                 <section class="card app-card h-100" id="about">
                     <div class="card-body p-4">
                         <p class="section-kicker">THE DEVELOPER</p>
                         <h2 class="section-heading">About the Developer</h2>
+
                         <p>
                             I’m Charles Owajoba, studying MSc Computer Science with
                             Software Engineering at Sheffield Hallam University.
                             My interests include cybersecurity, cloud computing and
                             building software that is understandable and useful to people.
                         </p>
+
                         <h3 class="h5 mt-4">What guides this project?</h3>
+
                         <ul class="principles-list">
                             <li>Clear structure and meaningful content</li>
                             <li>Responsive layouts that adapt to screen size</li>
@@ -83,6 +106,7 @@
                     <div class="card-body p-4">
                         <p class="section-kicker">DESIGN DECISIONS</p>
                         <h2 class="section-heading">The Thinking Behind the Build</h2>
+
                         <p>
                             I have treated this as a small working product rather than
                             a static mock-up. Bootstrap provides responsive layout
@@ -90,11 +114,13 @@
                             project’s visual identity and an external JavaScript file
                             manages interactions.
                         </p>
+
                         <p>
                             The breed explorer uses a user selection to make an API
                             request. The contact form demonstrates browser-side
                             validation; it does not claim to send or store submissions.
                         </p>
+
                         <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
                            target="_blank" rel="noopener noreferrer">
                             Read the official Bootstrap documentation
@@ -110,7 +136,10 @@
                         <h2 class="section-heading">Take a Break</h2>
                         <p>Select the time you have available for a short break.</p>
 
-                        <label for="break-duration" class="form-label">Available break time</label>
+                        <label for="break-duration" class="form-label">
+                            Available break time
+                        </label>
+
                         <select id="break-duration" name="breakDuration" class="form-select mb-3">
                             <option value="2">2 minutes</option>
                             <option value="5" selected>5 minutes</option>
@@ -137,6 +166,7 @@
                     <div class="card-body p-4">
                         <p class="section-kicker">LIVE API INTEGRATION</p>
                         <h2 class="section-heading">Dog Breed Explorer</h2>
+
                         <p>
                             Explore a breed by selecting it below, or request a random
                             dog image. Breed data and images are supplied by the
@@ -145,20 +175,29 @@
 
                         <form id="dog-breed-form">
                             <div class="mb-3">
-                                <label for="dog-breed" class="form-label">Choose a dog breed</label>
-                                <select id="dog-breed" name="breed" class="form-select" required disabled>
+                                <label for="dog-breed" class="form-label">
+                                    Choose a dog breed
+                                </label>
+
+                                <select id="dog-breed" name="breed" class="form-select"
+                                        required disabled>
                                     <option value="">Loading available breeds...</option>
                                 </select>
                             </div>
 
                             <div class="d-flex flex-wrap gap-2">
-                                <button type="submit" id="find-breed-dog" class="btn btn-primary" disabled>
+                                <button type="submit" id="find-breed-dog"
+                                        class="btn btn-primary" disabled>
                                     Find This Breed
                                 </button>
-                                <button type="button" id="load-dog" class="btn btn-outline-primary">
+
+                                <button type="button" id="load-dog"
+                                        class="btn btn-outline-primary">
                                     Get a Random Dog
                                 </button>
-                                <button type="button" id="retry-dog-breeds" class="btn btn-outline-secondary">
+
+                                <button type="button" id="retry-dog-breeds"
+                                        class="btn btn-outline-secondary">
                                     Retry Breed List
                                 </button>
                             </div>
@@ -174,7 +213,8 @@
 
                         <p class="small mt-3 mb-0">
                             API source:
-                            <a href="https://dog.ceo/dog-api/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://dog.ceo/dog-api/"
+                               target="_blank" rel="noopener noreferrer">
                                 Dog CEO API documentation
                             </a>
                         </p>
@@ -187,6 +227,7 @@
                     <div class="card-body p-4 p-lg-5">
                         <p class="section-kicker">FORM VALIDATION</p>
                         <h2 class="section-heading">Contact Form Demonstration</h2>
+
                         <p>
                             This form demonstrates HTML input types and browser-side
                             validation. It does not transmit or store personal information.
@@ -194,6 +235,7 @@
 
                         <form id="contact-form">
                             <div class="row g-3">
+
                                 <div class="col-12 col-md-6">
                                     <label for="full-name" class="form-label">Full name</label>
                                     <input type="text" class="form-control" id="full-name"
@@ -208,8 +250,11 @@
                                 </div>
 
                                 <div class="col-12 col-md-6">
-                                    <label for="contact-reason" class="form-label">Reason for contact</label>
-                                    <select class="form-select" id="contact-reason" name="reason" required>
+                                    <label for="contact-reason" class="form-label">
+                                        Reason for contact
+                                    </label>
+                                    <select class="form-select" id="contact-reason"
+                                            name="reason" required>
                                         <option value="">Please select</option>
                                         <option value="web-development">Web development</option>
                                         <option value="cybersecurity">Cybersecurity</option>
@@ -219,8 +264,11 @@
                                 </div>
 
                                 <div class="col-12 col-md-6">
-                                    <label for="contact-method" class="form-label">Preferred contact method</label>
-                                    <select class="form-select" id="contact-method" name="contactMethod" required>
+                                    <label for="contact-method" class="form-label">
+                                        Preferred contact method
+                                    </label>
+                                    <select class="form-select" id="contact-method"
+                                            name="contactMethod" required>
                                         <option value="">Please select</option>
                                         <option value="email">Email</option>
                                         <option value="phone">Phone</option>
@@ -230,8 +278,11 @@
                                 <div class="col-12">
                                     <label for="message" class="form-label">Message</label>
                                     <textarea class="form-control" id="message" name="message"
-                                              rows="4" minlength="10" maxlength="1000" required></textarea>
-                                    <div class="form-text">Enter between 10 and 1,000 characters.</div>
+                                              rows="4" minlength="10" maxlength="1000"
+                                              required></textarea>
+                                    <div class="form-text">
+                                        Enter between 10 and 1,000 characters.
+                                    </div>
                                 </div>
 
                                 <div class="col-12">
@@ -245,7 +296,9 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Validate Form</button>
+                                    <button type="submit" class="btn btn-primary">
+                                        Validate Form
+                                    </button>
                                 </div>
                             </div>
 
@@ -255,6 +308,7 @@
                     </div>
                 </section>
             </div>
+
         </div>
     </main>
 
